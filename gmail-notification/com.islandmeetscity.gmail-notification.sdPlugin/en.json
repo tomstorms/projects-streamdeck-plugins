@@ -1,0 +1,8 @@
+{
+  "Description": "Get notified if you've received an unread email in Gmail.", 
+  "Name": "Gmail Notification", 
+  "com.islandmeetscity.gmail-notification.action": {
+    "Name": "Gmail Notification", 
+    "Tooltip": "Get notified if you've received an unread email in Gmail."
+  }
+}

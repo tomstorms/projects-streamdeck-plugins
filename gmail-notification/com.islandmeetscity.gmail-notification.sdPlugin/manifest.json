@@ -1,0 +1,45 @@
+{
+  "Actions": [
+    {
+      "Icon": "images/gmailNotificationOn", 
+      "Name": "Gmail Notification", 
+      "States": [
+        {
+          "Image": "images/gmailNotificationOn",
+          "TitleAlignment": "bottom",
+          "FontSize": "10"
+        },
+        {
+          "Image": "images/gmailNotificationOff",
+          "TitleAlignment": "bottom",
+          "FontSize": "10"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Tooltip": "Get notified if you've received an unread email in Gmail.", 
+      "UUID": "com.islandmeetscity.gmail-notification.action"
+    }
+  ], 
+  "SDKVersion": 2,
+  "Author": "Island Meets City (Tom Storms)", 
+  "CodePath": "code.html", 
+  "Description": "Get notified if you've received an unread email in Gmail.", 
+  "Name": "Gmail Notification", 
+  "Icon": "images/gmailNotificationOn", 
+  "URL": "https://www.islandmeetscity.com", 
+  "Version": "1.0",
+  "OS": [
+    {
+        "Platform": "mac", 
+        "MinimumVersion" : "10.11"
+    },
+    {
+        "Platform": "windows", 
+        "MinimumVersion" : "10"
+    }
+  ],
+  "Software": 
+    {
+        "MinimumVersion" : "4.1"
+    }
+}
