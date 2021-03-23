@@ -8,6 +8,7 @@ Create your own plugin using: https://developer.elgato.com/documentation/stream-
 ## Plugins in this repo...
 
 - com.elgato.counter.sdPlugin (Cloned from https://github.com/elgatosf/streamdeck-counter)
+- gmail-notification - Gmail Notification plugin
 
 
 ## Plugin Ideas
