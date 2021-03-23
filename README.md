@@ -2,10 +2,12 @@
 
 Productivity plugins for the [Stream Deck SDK](https://www.elgato.com/en/stream-deck) device.
 
+Create your own plugin using: https://developer.elgato.com/documentation/stream-deck/sdk/create-your-own-plugin/
+
 
 ## Plugins in this repo...
 
-- com.elgato.counter.sdPlugin - Cloned from https://github.com/elgatosf/streamdeck-counter
+- com.elgato.counter.sdPlugin (Cloned from https://github.com/elgatosf/streamdeck-counter)
 
 
 ## Plugin Ideas
@@ -13,6 +15,8 @@ Productivity plugins for the [Stream Deck SDK](https://www.elgato.com/en/stream-
 - Gmail indicator per account
 - Pomodoro timer
 - A simple webhook once pressed and callback to keep the deck updated
+
+Have more ideas? Let me know so I can dev it and add it to this list.
 
 
 ## Dev Tips
