@@ -7,8 +7,10 @@ Create your own plugin using: https://developer.elgato.com/documentation/stream-
 
 ## Plugins in this repo...
 
-- com.elgato.counter.sdPlugin (Cloned from https://github.com/elgatosf/streamdeck-counter)
-- gmail-notification - Gmail Notification plugin
+- `gmail-notification` - Gmail Notification plugin
+
+
+Note: `samples/*` - Plugins in this folder are from other developers and are for educational references only.
 
 
 ## Plugin Ideas
@@ -23,3 +25,4 @@ Have more ideas? Let me know so I can dev it and add it to this list.
 ## Dev Tips
 
 - For a reasonably good looking icon, create a canvas at 225x225 and place icons inside as 125x125 with a black background.
+

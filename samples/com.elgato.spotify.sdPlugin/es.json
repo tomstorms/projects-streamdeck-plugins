@@ -1,0 +1,45 @@
+{
+  "Description": "Integración con Spotify", 
+  "Name": "Spotify", 
+  "com.elgato.spotify.play": {
+    "Name": "Reproducir/Pausa", 
+    "Tooltip": "Reproducir/Pausa en el dispositivo actual",
+    "States": [
+        {
+		  "Name": "Reproducir"
+        }, 
+        {
+		  "Name": "Pausa"
+        }
+      ]
+  },
+    "com.elgato.spotify.shuffle": {
+    "Name": "Activar/desactivar aleatorio", 
+    "Tooltip": "Activar/desactivar aleatorio en el dispositivo actual",
+    "States": [
+        {
+		  "Name": "Activado"
+        }, 
+        {
+		  "Name": "Desactivado"
+        }
+      ]
+  },
+  "com.elgato.spotify.next": {
+    "Name": "Pista siguiente", 
+    "Tooltip": "Reproducir pista siguiente"
+  }, 
+  "com.elgato.spotify.previous": {
+    "Name": "Pista anterior", 
+    "Tooltip": "Reproducir pista anterior"
+  },
+  "com.elgato.spotify.volume": {
+    "Name": "Volumen", 
+    "Tooltip": "Cambiar volumen de Spotify"
+    },
+    "Localization": {
+	"Volume Down": "Reducir volumen",
+	"Volume Up": "Aumentar volumen",
+	"Action": "Acción"
+  }
+}

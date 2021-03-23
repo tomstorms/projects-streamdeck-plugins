@@ -1,0 +1,45 @@
+{
+  "Description": "Spotify 集成", 
+  "Name": "Spotify", 
+  "com.elgato.spotify.play": {
+    "Name": "播放/暂停", 
+    "Tooltip": "在当前设备上播放/暂停",
+    "States": [
+        {
+		  "Name": "播放"
+        }, 
+        {
+		  "Name": "暂停"
+        }
+      ]
+  },
+    "com.elgato.spotify.shuffle": {
+    "Name": "切换随机播放", 
+    "Tooltip": "在当前设备上切换随机播放",
+    "States": [
+        {
+		  "Name": "开"
+        }, 
+        {
+		  "Name": "关"
+        }
+      ]
+  },
+  "com.elgato.spotify.next": {
+    "Name": "下一个轨道", 
+    "Tooltip": "播放下一个轨道"
+  }, 
+  "com.elgato.spotify.previous": {
+    "Name": "上一个轨道", 
+    "Tooltip": "播放上一个轨道"
+  },
+  "com.elgato.spotify.volume": {
+    "Name": "音量", 
+    "Tooltip": "更改 Spotify 音量"
+    },
+    "Localization": {
+	"Volume Down": "降低音量",
+	"Volume Up": "提高音量",
+	"Action": "操作"
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>com.courcelle.cryptoticker.ticker.property_inspector</title>
+    <link rel="stylesheet" href="css/pi.css">
+</head>
+
+<body>
+    <div class="sdpi-wrapper">
+        <!-- See https://github.com/elgatosf/streamdeck-pisamples/blob/master/Sources/com.elgato.pisamples.sdPlugin/index_pi.html -->
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Crypto pair</div>
+            <select class="sdpi-item-value select" id="select-pair" name="select-pair"></select>
+        </div>
+        <div class="currencyRelated">
+            <div class="sdpi-item">
+                <div class="sdpi-item-label">Convert to</div>
+                <select class="sdpi-item-value select" id="select-currency" name="select-currency"></select>
+            </div>
+        </div>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Multiplier</div>
+            <input type="number" inputmode="numeric" class="sdpi-item-value" id="multiplier" name="multiplier" value="" step="0.01"
+                placeholder="Enter a multiplier, defaults to 1" pattern="^\d*(\.\d+)?$">
+        </div>
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Digits</div>
+            <input type="number" inputmode="numeric" class="sdpi-item-value" id="digits" name="digits" value=""
+                placeholder="Enter the number of digits to round values" pattern="^[0-9]*$">
+        </div>
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Font</div>
+            <input type="text" class="sdpi-item-value" id="font" name="font"
+                placeholder="Font to use, comma separated (like CSS)">
+        </div>
+        <div type="color" class="sdpi-item">
+            <div class="sdpi-item-label">Background color</div>
+            <input type="color" id="backgroundColor" name="backgroundColor" class="sdpi-item-value" value="#000000">
+        </div>
+        <div type="color" class="sdpi-item">
+            <div class="sdpi-item-label">Text color</div>
+            <input type="color" id="textColor" name="textColor" class="sdpi-item-value" value="#ffffff">
+        </div>
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Alert rule</div>
+            <input type="text" class="sdpi-item-value" id="alertRule" name="alertRule"
+                placeholder="Example: value&gt;10 || value&lt;100">
+        </div>
+        <details>
+                <summary>How alert rules work</summary>
+                <p>Alert rule are JavaScript snippets that will be evaluated upon value change.</p>
+                <p>When returning true, the text and background colors will be inverted.</p>
+                <p><em>value</em> is the last price (displayed value).</p>
+                <p><em>changeDaily</em> is the amount that the last price has changed since yesterday.</p>
+                <p><em>changeDailyPercent</em> is the relative price change since yesterday (*100 for percentage change).</p>
+                <p><em>volume</em> is daily volume.</p>
+                <p><em>high</em> is the daily high.</p>
+                <p><em>low</em> is the daily low.</p>
+
+                <p>Alerts are only supported in "ticker" mode (ie not candlebars).</p>
+        </details>
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Background color rule</div>
+            <input type="text" class="sdpi-item-value" id="backgroundColorRule" name="backgroundColorRule"
+                placeholder="Example: alert?'#cc0000':''">
+        </div>
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Text color rule</div>
+            <input type="text" class="sdpi-item-value" id="textColorRule" name="textColorRule"
+                placeholder="Example: alert?'blue':''">
+        </div>
+        <details>
+                <summary>How color rules work</summary>
+                <p>Color rule are JavaScript snippets that will be evaluated upon value change.</p>
+                <p>When returning a non empty color, it will override the default ones.</p>
+                <p><em>alert</em> is a boolean indicating whether the alert mode is triggered (ie. the &quot;Alert rule&quot;).</p>
+                <p><em>value</em> is the last price (displayed value).</p>
+                <p><em>changeDaily</em> is the amount that the last price has changed since yesterday.</p>
+                <p><em>changeDailyPercent</em> is the relative price change since yesterday (*100 for percentage change).</p>
+                <p><em>volume</em> is daily volume.</p>
+                <p><em>high</em> is the daily high.</p>
+                <p><em>low</em> is the daily low.</p>
+                <p>Color rules are only supported in "ticker" mode (ie not candlebars).</p>
+        </details>
+
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Candles interval</div>
+            <select class="sdpi-item-value select" id="candlesInterval" name="candlesInterval">
+                    <option value="1m">1 minute</option>
+                    <option value="5m">5 minutes</option>
+                    <option value="15m">15 minutes</option>
+                    <option value="30m">30 minutes</option>
+                    <option value="1h">1 hour</option>
+                    <option value="3h">3 hours</option>
+                    <option value="6h">6 hours</option>
+                    <option value="12h">12 hours</option>
+                    <option value="1D">1 day</option>
+                    <option value="7D">7 days</option>
+                    <option value="14D">14 days</option>
+                    <option value="1M">1 month</option>
+            </select>
+        </div>
+
+        <div type="checkbox" class="sdpi-item">
+            <div class="sdpi-item-label empty"></div>
+            <div class="sdpi-item-value">
+                <div class="sdpi-item-child">
+                    <input id="displayHighLow" type="checkbox" value="on">
+                    <label for="displayHighLow" class="sdpi-item-label"><span></span> Display daily low/high</label>
+                </div>
+            </div>
+        </div>
+        <div type="checkbox" class="sdpi-item">
+            <div class="sdpi-item-label empty"></div>
+            <div class="sdpi-item-value">
+                <div class="sdpi-item-child">
+                    <input id="displayHighLowBar" type="checkbox" value="on">
+                    <label for="displayHighLowBar" class="sdpi-item-label"><span></span> Display daily low/high
+                        bar</label>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/pi.js"></script>
+</body>
+
+</html>

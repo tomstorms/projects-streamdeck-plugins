@@ -1,0 +1,45 @@
+{
+  "Description": "Spotify Integration", 
+  "Name": "Spotify", 
+  "com.elgato.spotify.play": {
+    "Name": "Abspielen/Pause", 
+    "Tooltip": "Abspielen/Pause auf aktuellem Gerät",
+    "States": [
+        {
+		  "Name": "Abspielen"
+        }, 
+        {
+		  "Name": "Pause"
+        }
+      ]
+  },
+    "com.elgato.spotify.shuffle": {
+    "Name": "Shuffle ein/aus", 
+    "Tooltip": "Shuffle auf aktuellem Gerät ein/aus",
+    "States": [
+        {
+		  "Name": "Ein"
+        }, 
+        {
+		  "Name": "Aus"
+        }
+      ]
+  },
+  "com.elgato.spotify.next": {
+    "Name": "Nächster Titel", 
+    "Tooltip": "Nächsten Titel abspielen"
+  }, 
+  "com.elgato.spotify.previous": {
+    "Name": "Voriger Titel", 
+    "Tooltip": "Voriger Titel"
+  },
+  "com.elgato.spotify.volume": {
+    "Name": "Lautstärke", 
+    "Tooltip": "Spotify-Lautstärke ändern"
+  },
+    "Localization": {
+	"Volume Down": "Lautstärke senken",
+	"Volume Up": "Lautstärke erhöhen",
+	"Action": "Aktion"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "Description": "Intégration de Spotify", 
+  "Name": "Spotify", 
+  "com.elgato.spotify.play": {
+    "Name": "Lecture/Pause", 
+    "Tooltip": "Lecture/Pause sur l’appareil actuel",
+    "States": [
+        {
+		  "Name": "Lecture"
+        }, 
+        {
+		  "Name": "Pause"
+        }
+      ]
+  },
+    "com.elgato.spotify.shuffle": {
+    "Name": "Lecture aléatoire", 
+    "Tooltip": "Activer/Désactiver la lecture aléatoire sur l’appareil actuel",
+    "States": [
+        {
+		  "Name": "Activer"
+        }, 
+        {
+		  "Name": "Désactiver"
+        }
+      ]
+  },
+  "com.elgato.spotify.next": {
+    "Name": "Piste suivante", 
+    "Tooltip": "Lire la piste suivante"
+  }, 
+  "com.elgato.spotify.previous": {
+    "Name": "Piste précédente", 
+    "Tooltip": "Lire la piste précédente"
+  },
+  "com.elgato.spotify.volume": {
+    "Name": "Volume", 
+    "Tooltip": "Changer le volume de Spotify"
+  },
+  "Localization": {
+	"Volume Down": "Réduire le volume",
+	"Volume Up": "Augmenter le volume",
+	"Action": "Action"
+  }
+}

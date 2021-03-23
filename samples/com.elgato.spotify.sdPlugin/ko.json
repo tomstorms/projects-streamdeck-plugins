@@ -1,0 +1,45 @@
+{
+  "Description": "Spotify 연동", 
+  "Name": "Spotify", 
+  "com.elgato.spotify.play": {
+    "Name": "재생/일시정지", 
+    "Tooltip": "이 기기에 대한 재생/일시정지",
+    "States": [
+        {
+		  "Name": "재생"
+        }, 
+        {
+		  "Name": "일시정지"
+        }
+      ]
+  },
+    "com.elgato.spotify.shuffle": {
+    "Name": "무작위 재생 켬/끔", 
+    "Tooltip": "이 기기에 대한 무작위 재생 켬/끔",
+    "States": [
+        {
+		  "Name": "켬"
+        }, 
+        {
+		  "Name": "끔"
+        }
+      ]
+  },
+  "com.elgato.spotify.next": {
+    "Name": "다음 트랙", 
+    "Tooltip": "다음 트랙 재생"
+  }, 
+  "com.elgato.spotify.previous": {
+    "Name": "이전 트랙", 
+    "Tooltip": "이전 트랙 재생"
+  },
+  "com.elgato.spotify.volume": {
+    "Name": "음량", 
+    "Tooltip": "Spotify 음량 변경"
+    },
+    "Localization": {
+	"Volume Down": "음량 줄이기",
+	"Volume Up": "음량 키우기",
+	"Action": "동작"
+  }
+}
